@@ -24,12 +24,12 @@ public class CommandeServiceImpl implements IGeneriqueService<Commande> {
 	}
 
 	@Override
-	public Commande recupererParId(int i) {
+	public Commande recupererParId(int id_c) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	//implémentation de la méthode créer pour une commande
+	// implémentation de la méthode créer pour une commande
 	@Override
 	public void creer(Commande c) {
 
