@@ -3,7 +3,7 @@ package fr.adaming.model;
 import java.util.Date;
 import java.util.List;
 
-public class Voyages {
+public class Voyage {
 
 	private int id_v;
 	private String libelle;
@@ -15,12 +15,12 @@ public class Voyages {
 	private int prix;
 	private int categorie;
 
-	public Voyages() {
+	public Voyage() {
 		super();
 
 	}
 
-	public Voyages(int id_v, String libelle, String destination, String description, List<Date> datesDepart, int duree,
+	public Voyage(int id_v, String libelle, String destination, String description, List<Date> datesDepart, int duree,
 			String urlPhoto, int prix, int categorie) {
 		super();
 		this.id_v = id_v;
@@ -34,7 +34,7 @@ public class Voyages {
 		this.categorie = categorie;
 	}
 
-	public Voyages(String libelle, String destination, String description, List<Date> datesDepart, int duree,
+	public Voyage(String libelle, String destination, String description, List<Date> datesDepart, int duree,
 			String urlPhoto, int prix, int categorie) {
 		super();
 		this.libelle = libelle;
@@ -117,6 +117,16 @@ public class Voyages {
 
 	public void setCategorie(int categorie) {
 		this.categorie = categorie;
+	}
+
+	@Override
+	public String toString() {
+		return "Voyage [id_v=" + id_v + ", " + (libelle != null ? "libelle=" + libelle + ", " : "")
+				+ (destination != null ? "destination=" + destination + ", " : "")
+				+ (description != null ? "description=" + description + ", " : "")
+				+ (datesDepart != null ? "datesDepart=" + datesDepart + ", " : "") + "duree=" + duree + ", "
+				+ (urlPhoto != null ? "urlPhoto=" + urlPhoto + ", " : "") + "prix=" + prix + ", categorie=" + categorie
+				+ "]";
 	}
 
 }

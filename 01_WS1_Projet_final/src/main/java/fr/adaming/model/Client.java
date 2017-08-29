@@ -81,4 +81,11 @@ public class Client {
 		this.admin = admin;
 	}
 
+	@Override
+	public String toString() {
+		return "Client [id_c=" + id_c + ", " + (nom != null ? "nom=" + nom + ", " : "")
+				+ (prenom != null ? "prenom=" + prenom + ", " : "") + (mail != null ? "mail=" + mail + ", " : "")
+				+ (mdp != null ? "mdp=" + mdp + ", " : "") + (admin != null ? "admin=" + admin : "") + "]";
+	}
+
 }
