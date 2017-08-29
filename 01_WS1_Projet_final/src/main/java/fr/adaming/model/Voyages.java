@@ -13,16 +13,17 @@ public class Voyages {
 	private int duree;
 	private String urlPhoto;
 	private int prix;
+	private int categorie;
 
 	public Voyages() {
 		super();
 
 	}
 
-	public Voyages(int id, String libelle, String destination, String description, List<Date> datesDepart, int duree,
-			String urlPhoto, int prix) {
+	public Voyages(int id_v, String libelle, String destination, String description, List<Date> datesDepart, int duree,
+			String urlPhoto, int prix, int categorie) {
 		super();
-		this.id_v = id;
+		this.id_v = id_v;
 		this.libelle = libelle;
 		this.destination = destination;
 		this.description = description;
@@ -30,10 +31,11 @@ public class Voyages {
 		this.duree = duree;
 		this.urlPhoto = urlPhoto;
 		this.prix = prix;
+		this.categorie = categorie;
 	}
 
 	public Voyages(String libelle, String destination, String description, List<Date> datesDepart, int duree,
-			String urlPhoto, int prix) {
+			String urlPhoto, int prix, int categorie) {
 		super();
 		this.libelle = libelle;
 		this.destination = destination;
@@ -42,14 +44,15 @@ public class Voyages {
 		this.duree = duree;
 		this.urlPhoto = urlPhoto;
 		this.prix = prix;
+		this.categorie = categorie;
 	}
 
-	public int getId() {
+	public int getId_v() {
 		return id_v;
 	}
 
-	public void setId(int id) {
-		this.id_v = id;
+	public void setId_v(int id_v) {
+		this.id_v = id_v;
 	}
 
 	public String getLibelle() {
@@ -106,6 +109,14 @@ public class Voyages {
 
 	public void setPrix(int prix) {
 		this.prix = prix;
+	}
+
+	public int getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(int categorie) {
+		this.categorie = categorie;
 	}
 
 }
