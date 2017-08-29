@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import fr.adaming.dao.IClientDao;
-import fr.adaming.dao.IGeneriqueDao;
 import fr.adaming.model.Client;
 
 public class ClientServiceImpl implements IClientService {
