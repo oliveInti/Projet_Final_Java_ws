@@ -1,10 +1,26 @@
 package fr.adaming.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class Voyage {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="voyages")
+public class Voyage implements Serializable{
+
+	/**
+	 * 
+	 */
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private static final long serialVersionUID = 1L;
 	private int id_v;
 	private String libelle;
 	private String destination;

@@ -1,24 +1,42 @@
 package fr.adaming.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * 
  * @authors projet blue
  *
  */
-public class Client {
+@Entity
+@Table(name="clients")
+public class Client implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_c;
 	private String nom;
 	private String prenom;
 	private String mail;
 	private String mdp;
-	private Boolean admin;
+	private boolean admin;
 
 	public Client() {
 		super();
 
 	}
 
-	public Client(int id_c, String nom, String prenom, String mail, String mdp, Boolean admin) {
+	public Client(int id_c, String nom, String prenom, String mail, String mdp, boolean admin) {
 		super();
 		this.id_c = id_c;
 		this.nom = nom;
@@ -28,7 +46,7 @@ public class Client {
 		this.admin = admin;
 	}
 
-	public Client(String nom, String prenom, String mail, String mdp, Boolean admin) {
+	public Client(String nom, String prenom, String mail, String mdp, boolean admin) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
@@ -77,11 +95,11 @@ public class Client {
 		this.mdp = mdp;
 	}
 
-	public Boolean getAdmin() {
+	public boolean getAdmin() {
 		return admin;
 	}
 
-	public void setAdmin(Boolean admin) {
+	public void setAdmin(boolean admin) {
 		this.admin = admin;
 	}
 
@@ -89,7 +107,7 @@ public class Client {
 	public String toString() {
 		return "Client [id_c=" + id_c + ", " + (nom != null ? "nom=" + nom + ", " : "")
 				+ (prenom != null ? "prenom=" + prenom + ", " : "") + (mail != null ? "mail=" + mail + ", " : "")
-				+ (mdp != null ? "mdp=" + mdp + ", " : "") + (admin != null ? "admin=" + admin : "") + "]";
+				+ (mdp != null ? "mdp=" + mdp + ", " : "") + "admin=" + admin + "]";
 	}
 
 }
