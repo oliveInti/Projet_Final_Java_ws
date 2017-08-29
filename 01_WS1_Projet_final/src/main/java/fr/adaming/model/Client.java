@@ -1,5 +1,9 @@
 package fr.adaming.model;
-
+/**
+ * 
+ * @authors projet blue
+ *
+ */
 public class Client {
 
 	private int id_c;
