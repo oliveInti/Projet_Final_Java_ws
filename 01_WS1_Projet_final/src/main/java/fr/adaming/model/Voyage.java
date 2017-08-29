@@ -22,6 +22,7 @@ public class Voyage implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private static final long serialVersionUID = 1L;
 	private int id_v;
+	
 	private String libelle;
 	private String destination;
 	private String description;
