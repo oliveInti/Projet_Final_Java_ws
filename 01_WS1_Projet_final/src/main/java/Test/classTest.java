@@ -1,12 +1,8 @@
 package Test;
 
-import org.junit.Test;
-
 public class classTest {
 
-	@Test
-	public void testMethode() {
-		assert
-	}
+	public static void main(String[] args) {
 
+	}
 }
