@@ -13,6 +13,6 @@ public interface IGeneriqueDao<T> {
 
 	public void supprimer(T t);
 
-	public T modifier(T e);
+	public T modifier(T t);
 
 }

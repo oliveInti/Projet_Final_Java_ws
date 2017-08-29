@@ -1,5 +1,11 @@
 package fr.adaming.service;
 
-public interface IClientService {
+import fr.adaming.model.Client;
 
+public interface IClientService extends IGeneriqueService<Client>{
+
+	
+	public boolean isAdmin(Client client); 
+	
+	
 }

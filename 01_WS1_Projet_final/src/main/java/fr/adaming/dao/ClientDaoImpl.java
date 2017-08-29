@@ -44,7 +44,7 @@ public class ClientDaoImpl implements IClientDao {
 	}
 
 	@Override
-	public Client modifier(Client e) {
+	public Client modifier(Client client) {
 		// TODO Auto-generated method stub
 		return null;
 	}
