@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Voyages {
 
-	private int id;
+	private int id_v;
 	private String libelle;
 	private String destination;
 	private String description;
@@ -22,7 +22,7 @@ public class Voyages {
 	public Voyages(int id, String libelle, String destination, String description, List<Date> datesDepart, int duree,
 			String urlPhoto, int prix) {
 		super();
-		this.id = id;
+		this.id_v = id;
 		this.libelle = libelle;
 		this.destination = destination;
 		this.description = description;
@@ -45,11 +45,11 @@ public class Voyages {
 	}
 
 	public int getId() {
-		return id;
+		return id_v;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id_v = id;
 	}
 
 	public String getLibelle() {
