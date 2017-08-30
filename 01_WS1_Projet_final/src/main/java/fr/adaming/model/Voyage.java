@@ -21,6 +21,7 @@ public class Voyage implements Serializable {
 
 	private int id_v;
 
+	// benoit : libelle du voyage
 	private String libelle;
 	private String destination;
 	private String description;
