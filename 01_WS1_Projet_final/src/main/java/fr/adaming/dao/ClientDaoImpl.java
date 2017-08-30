@@ -22,6 +22,12 @@ public class ClientDaoImpl implements IClientDao {
 	@Autowired
 	private SessionFactory sf;
 	
+	
+	
+	public void setSf(SessionFactory sf) {
+		this.sf = sf;
+	}
+
 	//récupérer tous les clients de la base de donnée (BD)
 	@Override
 	public List<Client> recupererTout() {

@@ -21,6 +21,10 @@ public class VoyageDaoImpl implements IVoyageDao {
 	@Autowired
 	private SessionFactory sf;
 
+	public void setSf(SessionFactory sf) {
+		this.sf = sf;
+	}
+
 	@Override
 	public List<Voyage> recupererTout() {
 		// ouvrir une session (bus de données -> bud)
