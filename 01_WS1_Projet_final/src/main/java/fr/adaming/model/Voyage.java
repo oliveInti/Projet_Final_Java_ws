@@ -1,19 +1,20 @@
 package fr.adaming.model;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "voyages")
 public class Voyage implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -24,7 +25,9 @@ public class Voyage implements Serializable {
 	private String libelle;
 	private String destination;
 	private String description;
-	private List<String> datesDepart;
+
+	@OneToMany(mappedBy = "voyage", cascade = CascadeType.ALL)
+	private List<DateDepart> datesDepart;
 	private int duree;
 	private String urlPhoto;
 	private int prix;
@@ -35,8 +38,8 @@ public class Voyage implements Serializable {
 
 	}
 
-	public Voyage(int id_v, String libelle, String destination, String description, List<String> datesDepart, int duree,
-			String urlPhoto, int prix, int categorie) {
+	public Voyage(int id_v, String libelle, String destination, String description, List<DateDepart> datesDepart,
+			int duree, String urlPhoto, int prix, int categorie) {
 		super();
 		this.id_v = id_v;
 		this.libelle = libelle;
@@ -49,7 +52,7 @@ public class Voyage implements Serializable {
 		this.categorie = categorie;
 	}
 
-	public Voyage(String libelle, String destination, String description, List<String> datesDepart, int duree,
+	public Voyage(String libelle, String destination, String description, List<DateDepart> datesDepart, int duree,
 			String urlPhoto, int prix, int categorie) {
 		super();
 		this.libelle = libelle;
@@ -94,11 +97,11 @@ public class Voyage implements Serializable {
 		this.description = description;
 	}
 
-	public List<String> getDatesDepart() {
+	public List<DateDepart> getDatesDepart() {
 		return datesDepart;
 	}
 
-	public void setDatesDepart(List<String> datesDepart) {
+	public void setDatesDepart(List<DateDepart> datesDepart) {
 		this.datesDepart = datesDepart;
 	}
 
