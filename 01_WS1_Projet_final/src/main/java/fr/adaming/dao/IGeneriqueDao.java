@@ -1,6 +1,12 @@
 package fr.adaming.dao;
 
 import java.util.List;
+/**
+ * 
+ * @author projet blue
+ *
+ * @param <T>
+ */
 
 // Interface générique définissant les méthodes CRUD utilisées par toutes les classes
 public interface IGeneriqueDao<T> {

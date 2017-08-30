@@ -8,7 +8,7 @@ import fr.adaming.model.Voyage;
  * Extention de l'interface Générique
  * Contient les méthodes CRUD
  * + [rien pour le moment]
- * @author INTI2017FORMATION
+ * @author projet blue
  *
  */
 public interface IVoyageDao extends IGeneriqueDao<Voyage> {
