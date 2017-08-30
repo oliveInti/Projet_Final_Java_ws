@@ -3,6 +3,7 @@ package fr.adaming.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import fr.adaming.dao.IGeneriqueDao;
 import fr.adaming.model.Commande;
@@ -14,6 +15,7 @@ import fr.adaming.model.Commande;
  *
  */
 // Implémentation Service de l'interface générique service
+@Service
 public class CommandeServiceImpl implements IGeneriqueService<Commande> {
 
 	@Autowired
