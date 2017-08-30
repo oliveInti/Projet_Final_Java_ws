@@ -7,6 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import fr.adaming.dao.IGeneriqueDao;
 import fr.adaming.model.Commande;
 
+
+/**
+ * 
+ * @author projet blue
+ *
+ */
 // Implémentation Service de l'interface générique service
 public class CommandeServiceImpl implements IGeneriqueService<Commande> {
 
@@ -19,33 +25,32 @@ public class CommandeServiceImpl implements IGeneriqueService<Commande> {
 
 	@Override
 	public List<Commande> recupererTout() {
-		// TODO Auto-generated method stub
+		coDao.recupererTout();
 		return null;
 	}
 
 	@Override
-	public Commande recupererParId(int id_c) {
-		// TODO Auto-generated method stub
+	public Commande recupererParId(int id_commande) {
+		coDao.recupererParId(id_commande);
 		return null;
 	}
 
-	// implémentation de la méthode créer pour une commande
+	// implémentation de la méthode créer une commande
 	@Override
-	public void creer(Commande c) {
-
-		coDao.creer(c);
+	public void creer(Commande commande) {
+		coDao.creer(commande);
 
 	}
 
 	@Override
-	public void supprimer(Commande c) {
-		// TODO Auto-generated method stub
+	public void supprimer(Commande commande) {
+		coDao.supprimer(commande);
 
 	}
 
 	@Override
-	public Commande modifier(Commande c) {
-		// TODO Auto-generated method stub
+	public Commande modifier(Commande commande) {
+		coDao.modifier(commande);
 		return null;
 	}
 
