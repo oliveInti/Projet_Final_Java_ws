@@ -4,15 +4,18 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import fr.adaming.dao.IGeneriqueDao;
+import fr.adaming.dao.VoyageDaoImpl;
 import fr.adaming.model.Voyage;
 
 @Service
-public class VoyageServiceImpl implements IGeneriqueService<Voyage> {
+@Transactional
+public class VoyageServiceImpl implements IVoyageService {
 
-	@Autowired
-	private IGeneriqueDao<Voyage> voyageDao;
+	// @Autowired
+	private IGeneriqueDao<Voyage> voyageDao = new VoyageDaoImpl();
 
 	public void setVoyageDao(IGeneriqueDao<Voyage> voyageDao) {
 		this.voyageDao = voyageDao;

@@ -4,10 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import fr.adaming.dao.CommandeDaoImpl;
 import fr.adaming.dao.IGeneriqueDao;
 import fr.adaming.model.Commande;
-
 
 /**
  * 
@@ -16,10 +17,11 @@ import fr.adaming.model.Commande;
  */
 // Implémentation Service de l'interface générique service
 @Service
-public class CommandeServiceImpl implements IGeneriqueService<Commande> {
+@Transactional
+public class CommandeServiceImpl implements ICommandeService {
 
-	@Autowired
-	private IGeneriqueDao<Commande> coDao;
+	// @Autowired
+	private IGeneriqueDao<Commande> coDao = new CommandeDaoImpl();
 
 	public void setCoDao(IGeneriqueDao<Commande> coDao) {
 		this.coDao = coDao;

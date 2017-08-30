@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.adaming.model.Voyage;
-import fr.adaming.service.IGeneriqueService;
+import fr.adaming.service.IVoyageService;
 
 /**
  * Définition des méthodes du web service Voyage avec Spring MVC
@@ -24,12 +24,12 @@ import fr.adaming.service.IGeneriqueService;
 public class VoyageRestController {
 
 	@Autowired
-	private IGeneriqueService<Voyage> voyageService;
+	private IVoyageService voyageService;
 
-	public void setVoyageService(IGeneriqueService<Voyage> voyageService) {
+	public void setVoyageService(IVoyageService voyageService) {
 		this.voyageService = voyageService;
 	}
-	
+
 	@RequestMapping(value = "/listeVoyage", method = RequestMethod.GET, produces = "application/json")
 	public List<Voyage> recupererTout() {
 		return voyageService.recupererTout();
@@ -39,18 +39,18 @@ public class VoyageRestController {
 	public Voyage recupererParId(@PathVariable("pId") int id) {
 		return voyageService.recupererParId(id);
 	}
-	
-	@RequestMapping(value="/ajout", method=RequestMethod.POST, consumes="application/json")
+
+	@RequestMapping(value = "/ajout", method = RequestMethod.POST, consumes = "application/json")
 	public void ajouterVoyage(@RequestBody Voyage v) {
 		voyageService.creer(v);
 	}
-	
-	@RequestMapping(value="/modif", method=RequestMethod.PUT, consumes="application/json")
-	public void modifierVoyage(@RequestBody Voyage v){
+
+	@RequestMapping(value = "/modif", method = RequestMethod.PUT, consumes = "application/json")
+	public void modifierVoyage(@RequestBody Voyage v) {
 		voyageService.modifier(v);
 	}
 
-	@RequestMapping(value="/supp", method=RequestMethod.DELETE, consumes="application/json")
+	@RequestMapping(value = "/supp", method = RequestMethod.DELETE, consumes = "application/json")
 	public void supprimerVoyage(@RequestBody Voyage v) {
 		voyageService.supprimer(v);
 	}

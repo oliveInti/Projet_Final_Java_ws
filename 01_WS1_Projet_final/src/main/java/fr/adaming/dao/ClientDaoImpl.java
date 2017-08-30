@@ -22,8 +22,6 @@ public class ClientDaoImpl implements IClientDao {
 	@Autowired
 	private SessionFactory sf;
 	
-	
-	
 	public void setSf(SessionFactory sf) {
 		this.sf = sf;
 	}
