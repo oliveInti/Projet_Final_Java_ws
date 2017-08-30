@@ -20,13 +20,13 @@ public class ClientServiceImpl implements IClientService {
 
 	@Override
 	public List<Client> recupererTout() {
-		// TODO Auto-generated method stub
+		clDao.recupererTout();
 		return null;
 	}
 
 	@Override
 	public Client recupererParId(int i) {
-		// TODO Auto-generated method stub
+		clDao.recupererParId(i);
 		return null;
 	}
 
@@ -38,13 +38,13 @@ public class ClientServiceImpl implements IClientService {
 
 	@Override
 	public void supprimer(Client client) {
-		// TODO Auto-generated method stub
+		clDao.supprimer(client);
 
 	}
 
 	@Override
 	public Client modifier(Client client) {
-		// TODO Auto-generated method stub
+		clDao.modifier(client);
 		return null;
 	}
 

@@ -12,7 +12,7 @@ import fr.adaming.model.Voyage;
 
 /**
  * 
- * @author INTI2017FORMATION
+ * @author projet blue
  *
  */
 @Repository
