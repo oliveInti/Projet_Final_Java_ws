@@ -40,12 +40,12 @@ public class VoyageRestController {
 		return voyageService.recupererParId(id);
 	}
 
-	@RequestMapping(value = "/ajout", method = RequestMethod.POST, consumes = "application/json")
+	@RequestMapping(value = "/ajout", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
 	public void ajouterVoyage(@RequestBody Voyage v) {
 		voyageService.creer(v);
 	}
 
-	@RequestMapping(value = "/modif", method = RequestMethod.PUT, consumes = "application/json")
+	@RequestMapping(value = "/modif", method = RequestMethod.PUT, produces = "application/json", consumes = "application/json")
 	public void modifierVoyage(@RequestBody Voyage v) {
 		voyageService.modifier(v);
 	}

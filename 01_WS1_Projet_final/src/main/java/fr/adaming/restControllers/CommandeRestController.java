@@ -20,7 +20,7 @@ import fr.adaming.service.ICommandeService;
  */
 
 @RestController
-@RequestMapping("/voyages")
+@RequestMapping("/commandes")
 public class CommandeRestController {
 
 	// @Autowired
@@ -40,12 +40,12 @@ public class CommandeRestController {
 		return commandeService.recupererParId(id);
 	}
 
-	@RequestMapping(value = "/ajout", method = RequestMethod.POST, consumes = "application/json")
+	@RequestMapping(value = "/ajout", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
 	public void ajouterCommande(@RequestBody Commande c) {
 		commandeService.creer(c);
 	}
 
-	@RequestMapping(value = "/modif", method = RequestMethod.PUT, consumes = "application/json")
+	@RequestMapping(value = "/modif", method = RequestMethod.PUT, produces = "application/json", consumes = "application/json")
 	public void modifierCommande(@RequestBody Commande c) {
 		commandeService.modifier(c);
 	}

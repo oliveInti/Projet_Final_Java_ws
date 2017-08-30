@@ -8,7 +8,8 @@
 
 	<!-- Détection auto des composants -->
 	<context:component-scan base-package="fr.adaming.restControllers" />
-
+	<context:component-scan base-package="fr.adaming.dao" />
+	
 	<!-- Activation des annotations de spring mvc -->
 	<mvc:annotation-driven />
 

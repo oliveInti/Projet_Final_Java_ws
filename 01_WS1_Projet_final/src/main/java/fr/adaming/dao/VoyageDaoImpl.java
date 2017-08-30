@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import fr.adaming.model.Voyage;
 
@@ -21,13 +22,16 @@ public class VoyageDaoImpl implements IVoyageDao {
 	@Autowired
 	private SessionFactory sf;
 
+	@Autowired
 	public void setSf(SessionFactory sf) {
 		this.sf = sf;
 	}
 
 	@Override
+	@Transactional
 	public List<Voyage> recupererTout() {
 		// ouvrir une session (bus de données -> bud)
+		
 		Session s = sf.getCurrentSession();
 		// la requête HQL
 		String req = "FROM Voyage";

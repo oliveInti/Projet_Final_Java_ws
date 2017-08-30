@@ -40,7 +40,7 @@ public class ClientRestController {
 		return clientService.recupererParId(id);
 	}
 
-	@RequestMapping(value = "/ajout", method = RequestMethod.POST, consumes = "application/json")
+	@RequestMapping(value = "/ajout", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
 	public void ajouterClient(@RequestBody Client c) {
 
 		clientService.creer(c);
@@ -49,7 +49,7 @@ public class ClientRestController {
 	}
 
 	@CrossOrigin
-	@RequestMapping(value = "/modif", method = RequestMethod.PUT, consumes = "application/json")
+	@RequestMapping(value = "/modif", method = RequestMethod.PUT, produces = "application/json", consumes = "application/json")
 	public void modifierClient(@RequestBody Client c) {
 		clientService.modifier(c);
 	}
