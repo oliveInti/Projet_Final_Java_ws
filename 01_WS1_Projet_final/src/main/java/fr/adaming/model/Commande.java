@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -20,7 +22,11 @@ public class Commande implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	@OneToOne
+	@JoinColumn(name="fk_c", referencedColumnName="id_c")
 	private Client client;
+	@OneToOne
+	@JoinColumn(name="fk_v", referencedColumnName="id_v")
 	private Voyage voyage;
 	private String agence;
 	private int nbAdulte;

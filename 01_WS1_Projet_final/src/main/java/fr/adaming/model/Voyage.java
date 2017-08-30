@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -32,6 +33,8 @@ public class Voyage implements Serializable {
 	private String urlPhoto;
 	private int prix;
 	private int categorie;
+	@OneToOne(mappedBy="voyage")
+	private Commande commande;
 
 	public Voyage() {
 		super();
