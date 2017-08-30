@@ -11,18 +11,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="voyages")
-public class Voyage implements Serializable{
-
-	/**
-	 * 
-	 */
+@Table(name = "voyages")
+public class Voyage implements Serializable {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private int id_v;
-	
+
 	private String libelle;
 	private String destination;
 	private String description;
