@@ -3,6 +3,7 @@ package fr.adaming.restControllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,6 +50,8 @@ public class ClientRestController {
 		//return http.("Access-Control-Allow-Origin", "*").
 	}
 	
+
+	@CrossOrigin
 	@RequestMapping(value="/modif", method=RequestMethod.PUT, consumes="application/json")
 	public void modifierClient(@RequestBody Client c){
 		clientService.modifier(c);
