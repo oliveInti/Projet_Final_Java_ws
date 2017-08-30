@@ -18,14 +18,13 @@ public class Voyage implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
 	private int id_v;
 
 	// benoit : libelle du voyage
 	private String libelle;
 	private String destination;
 	private String description;
-	private List<Date> datesDepart;
+	private List<String> datesDepart;
 	private int duree;
 	private String urlPhoto;
 	private int prix;
@@ -36,7 +35,7 @@ public class Voyage implements Serializable {
 
 	}
 
-	public Voyage(int id_v, String libelle, String destination, String description, List<Date> datesDepart, int duree,
+	public Voyage(int id_v, String libelle, String destination, String description, List<String> datesDepart, int duree,
 			String urlPhoto, int prix, int categorie) {
 		super();
 		this.id_v = id_v;
@@ -50,7 +49,7 @@ public class Voyage implements Serializable {
 		this.categorie = categorie;
 	}
 
-	public Voyage(String libelle, String destination, String description, List<Date> datesDepart, int duree,
+	public Voyage(String libelle, String destination, String description, List<String> datesDepart, int duree,
 			String urlPhoto, int prix, int categorie) {
 		super();
 		this.libelle = libelle;
@@ -95,11 +94,11 @@ public class Voyage implements Serializable {
 		this.description = description;
 	}
 
-	public List<Date> getDatesDepart() {
+	public List<String> getDatesDepart() {
 		return datesDepart;
 	}
 
-	public void setDatesDepart(List<Date> datesDepart) {
+	public void setDatesDepart(List<String> datesDepart) {
 		this.datesDepart = datesDepart;
 	}
 
