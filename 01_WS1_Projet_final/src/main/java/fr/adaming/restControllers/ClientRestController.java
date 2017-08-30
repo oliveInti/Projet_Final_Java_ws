@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.adaming.model.Client;
@@ -39,9 +40,13 @@ public class ClientRestController {
 		return clientService.recupererParId(id);
 	}
 	
+	
 	@RequestMapping(value="/ajout", method=RequestMethod.POST, consumes="application/json")
 	public void ajouterClient(@RequestBody Client c) {
+			
 		clientService.creer(c);
+
+		//return http.("Access-Control-Allow-Origin", "*").
 	}
 	
 	@RequestMapping(value="/modif", method=RequestMethod.PUT, consumes="application/json")

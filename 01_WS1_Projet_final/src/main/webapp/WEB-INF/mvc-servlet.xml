@@ -15,5 +15,4 @@
 	<!-- Forcer le conteneur web à intercepter les requètes -->
 	<mvc:default-servlet-handler />
 
-
 </beans>
